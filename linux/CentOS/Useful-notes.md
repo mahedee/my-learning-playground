@@ -41,4 +41,17 @@ $ yum install google-chrome-stable_current_x86_64.rpm
 $ ifconfig | grep inet
 ```
 
-## Know how
+- To view the IP address of the system, run the following command:
+
+```bash
+$ ip addr show
+```
+or
+```bash
+$ ip addr
+```
+
+
+## References
+
+- [Connect to Centos (Linux) on Putty](https://www.youtube.com/watch?v=k5-t2VFvN-Y)
