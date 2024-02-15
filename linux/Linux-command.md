@@ -1,19 +1,32 @@
 Certainly! Here's a list of Linux terminal commands along with examples and short descriptions:
 
-1. **pwd**
-   - Command: `pwd`
+* **pwd**
+   - Command: `pwd` - Print working directory
    - Description: Prints the current working directory.
    - Example: `pwd`
 
-2. **ls**
+* **ls**
    - Command: `ls`
    - Description: Lists files and directories in the current directory.
    - Example: `ls`
+   - ls means list or list segments.
+   - ls / - list the root directory
+   - ls /home - list the home directory
+   - ls -l - list the files in long format, including permissions, number of links, owner, group, size, and time of last modification.
+   - ls -l /home - list the files in the home directory in long format.
+   - ls - l /media - list the files in the media directory in long format.
 
-3. **cd**
+* **clear**
+   - Command: `clear`
+   - Description: Clears the terminal screen.
+   - Example: `clear`
+
+* **cd**
    - Command: `cd [directory]`
    - Description: Changes the current directory.
    - Example: `cd Documents`
+   - `cd ~` - change to the home directory
+   - `cd ..` - change to the parent directory
 
 4. **cp**
    - Command: `cp [source] [destination]`
@@ -40,12 +53,17 @@ Certainly! Here's a list of Linux terminal commands along with examples and shor
    - Description: Removes an empty directory.
    - Example: `rmdir empty_directory`
 
-9. **touch**
+**touch**
    - Command: `touch [file]`
    - Description: Creates an empty file or updates the timestamp of an existing file.
    - Example: `touch new_file.txt`
 
-10. **cat**
+**nano**
+    - Command: `nano [file]`
+    - Description: Opens the nano text editor to edit a file.
+    - Example: `nano file.txt`
+
+**cat**
     - Command: `cat [file]`
     - Description: Concatenates and displays the content of a file.
     - Example: `cat file.txt`
@@ -99,5 +117,10 @@ Certainly! Here's a list of Linux terminal commands along with examples and shor
     - Command: `tar [options] [archive_name] [files]`
     - Description: Creates or extracts tar archives.
     - Example: `tar -cvf archive.tar file1 file2`
+
+**which**
+    - Command: `which [command]`
+    - Description: Displays the path of a command.
+    - Example: `which nano`, `which ls`
 
 These are just a few examples, and each command has various options and use cases. You can explore more by checking the respective manual pages using `man` command, e.g., `man ls`.
