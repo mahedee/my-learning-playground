@@ -61,3 +61,17 @@ Nano is a simple and user-friendly text editor that is often recommended for beg
 
 Both are text editors. 
 
+## Log off from the terminal
+
+The command to log off or log out of a Linux system depends on the desktop environment or terminal you are using. Here are common methods:
+
+1. **Using GUI (Graphical User Interface)**:
+   - If you're using a desktop environment like GNOME, KDE, or Xfce, you typically log off by clicking on your username or profile icon in the top-right corner of the screen and selecting "Log Out" or "Sign Out" from the dropdown menu.
+
+2. **Using Terminal**:
+   - If you're working in a terminal session without a graphical interface, you can log out by using the `exit` command or pressing `Ctrl+D`.
+
+3. **Command-Line Interface**:
+   - If you're connected to a remote system via SSH or working in a text-based console, you can also use the `logout` command to log out of the current session.
+
+These methods will log you out of your current session and return you to the login screen or terminate the session, depending on the context.
