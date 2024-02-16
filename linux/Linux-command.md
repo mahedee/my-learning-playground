@@ -182,6 +182,19 @@ __chmod__
     - Example: `yum update` - update all installed packages
     - Example: `yum list installed` - list all installed packages
 
+* __systemctl__
+    - Command: `systemctl [options] [command] [unit]`
+    - Description: Controls the systemd system and service manager.
+    - Example: `systemctl start service_name` - start a service
+    - Example: `systemctl stop service_name` - stop a service
+    - Example: `systemctl restart service_name` - restart a service
+    - Example: `systemctl enable service_name` - enable a service to start at boot
+    - Example: `systemctl disable service_name` - disable a service from starting at boot
+    - Example: `systemctl status service_name` - view the status of a service
+    - Example: `systemctl status httpd` - view the status of the Apache web server service
+    - Example: `sudo systemctl disable httpd` - disable the Apache web server service from starting at boot (requires sudo)
+    - Example: `sudo systemctl stop  httpd` - stop the Apache web server service (requires sudo)
+
 
 ## References
 - [How to install htop on CentOS Linux 8](https://www.cyberciti.biz/faq/how-to-install-htop-on-centos-linux-8/) - htop is nothing but an interactive process viewer for CentOS Linux 8 system
