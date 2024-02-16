@@ -1,11 +1,11 @@
 Certainly! Here's a list of Linux terminal commands along with examples and short descriptions:
 
-* **pwd**
+* __pwd__
    - Command: `pwd` - Print working directory
    - Description: Prints the current working directory.
    - Example: `pwd`
 
-* **ls**
+* __ls__
    - Command: `ls`
    - Description: Lists files and directories in the current directory.
    - Example: `ls`
@@ -15,35 +15,42 @@ Certainly! Here's a list of Linux terminal commands along with examples and shor
    - ls -l - list the files in long format, including permissions, number of links, owner, group, size, and time of last modification.
    - ls -l /home - list the files in the home directory in long format.
    - ls - l /media - list the files in the media directory in long format.
+   - Example: `s -l ..` - list the files in the parent directory in long format. 
 
-* **clear**
+* __clear__
    - Command: `clear`
    - Description: Clears the terminal screen.
    - Example: `clear`
 
-* **cd**
+* __cd__
    - Command: `cd [directory]`
    - Description: Changes the current directory.
    - Example: `cd Documents`
    - `cd ~` - change to the home directory
    - `cd ..` - change to the parent directory
 
-4. **cp**
+* __cp__
    - Command: `cp [source] [destination]`
    - Description: Copies files or directories.
    - Example: `cp file.txt /path/to/destination`
+   - Example: `cp test2.txt newfile.txt`
 
-5. **mv**
+* __mv__
    - Command: `mv [source] [destination]`
    - Description: Moves or renames files or directories.
    - Example: `mv file.txt new_location/`
+   - Example: `mv *.txt notes` - move all files with .txt extension to the notes directory
+   - Example: `mv testfile.txt ..` - move the file to the parent directory
+   - Example: `mv ../testfile.txt .` - move the file from the parent directory to the current directory
+   - Example: `mv file1.txt file2.txt` - rename file1.txt to file2.txt
 
-6. **rm**
+
+* __rm__
    - Command: `rm [file]`
    - Description: Removes (deletes) files.
    - Example: `rm old_file.txt`
 
-7. **mkdir**
+* __mkdir__
    - Command: `mkdir [directory]`
    - Description: Creates a new directory.
    - Example: `mkdir new_directory`
@@ -53,17 +60,17 @@ Certainly! Here's a list of Linux terminal commands along with examples and shor
    - Description: Removes an empty directory.
    - Example: `rmdir empty_directory`
 
-**touch**
+__touch__
    - Command: `touch [file]`
    - Description: Creates an empty file or updates the timestamp of an existing file.
    - Example: `touch new_file.txt`
 
-**nano**
+__nano__
     - Command: `nano [file]`
     - Description: Opens the nano text editor to edit a file.
     - Example: `nano file.txt`
 
-**cat**
+__cat__
     - Command: `cat [file]`
     - Description: Concatenates and displays the content of a file.
     - Example: `cat file.txt`
@@ -78,10 +85,14 @@ Certainly! Here's a list of Linux terminal commands along with examples and shor
     - Description: Searches for a pattern in a file.
     - Example: `grep "keyword" file.txt`
 
-13. **chmod**
+__chmod__
     - Command: `chmod [permissions] [file]`
     - Description: Changes file permissions.
-    - Example: `chmod +x script.sh`
+    - Example: `chmod +x script.sh` - add execute permission to the file 'script.sh' for the owner user
+    - Example: `chmod 755 script.sh` - set the file 'script.sh' to have read, write, and execute permissions for the owner user, and read and execute permissions for the group and others
+    - Example: `chmod u+x script.sh` - add execute permission to the file 'script.sh' for the owner user only
+    - Example: `chmod go-rw file.txt` - remove read and write permissions for the group and others from the file 'file.txt'
+    - Example: `chmod a+rwx script.sh` - add read, write, and execute permissions for all (owner, group, and others) to the file 'script.sh'
 
 14. **chown**
     - Command: `chown [user]:[group] [file]`
@@ -103,10 +114,10 @@ Certainly! Here's a list of Linux terminal commands along with examples and shor
     - Description: Displays the manual page for a command.
     - Example: `man ls`
 
-18. **df**
+* __df__
     - Command: `df`
     - Description: Displays disk space usage.
-    - Example: `df -h`
+    - Example: `df -h` - display disk space usage in human-readable format
 
 19. **du**
     - Command: `du [directory]`
@@ -118,9 +129,60 @@ Certainly! Here's a list of Linux terminal commands along with examples and shor
     - Description: Creates or extracts tar archives.
     - Example: `tar -cvf archive.tar file1 file2`
 
-**which**
+* __which__
     - Command: `which [command]`
     - Description: Displays the path of a command.
     - Example: `which nano`, `which ls`
 
-These are just a few examples, and each command has various options and use cases. You can explore more by checking the respective manual pages using `man` command, e.g., `man ls`.
+* __diff__
+    - Command: `diff [file1] [file2]`
+    - Description: Compares two files line by line.
+    - Example: `diff file1.txt file2.txt`
+
+* __free__
+    - Command: `free`
+    - Description: Displays the amount of free and used memory in the system.
+    - Example: `free -h` - display memory usage in human-readable format
+    - Example: `free -m` - display memory usage in megabytes
+
+* __htop__
+    - Command: `htop`
+    - Description: Interactive process viewer.
+    - Example: `htop` - run htop to view and manage processes
+
+* __uptime__
+    - Command: `uptime`
+    - Description: Displays the system uptime and load average.
+    - Example: `uptime` - show system uptime and load average
+
+* __sudo__
+    - Command: `sudo [command]`
+    - Description: Executes a command with superuser privileges.
+    - Example: `sudo dnf update` - update system packages with superuser privileges
+    - Example: `sudo systemctl restart apache2` - restart the Apache web server with superuser privileges
+
+* __dnf__
+    - Command: `dnf [options] [command] [package]`
+    - Description: Package manager for installing, updating, and removing software packages.
+    - Example: `dnf install package_name` - install a package
+    - Example: `dnf remove package_name` - remove a package
+    - Example: `dnf update` - update all installed packages
+    - Example: `dnf list` - list all installed packages
+
+* __su__
+    - Command: `su [username]`
+    - Description: Switches to another user account.
+    - Example: `su user2` - switch to the user account 'user2
+
+* __yum__
+    - Command: `yum [options] [command] [package]`
+    - Description: Package manager for installing, updating, and removing software packages.
+    - Example: `yum install package_name` - install a package
+    - Example: `yum remove package_name` - remove a package
+    - Example: `yum update` - update all installed packages
+    - Example: `yum list installed` - list all installed packages
+
+
+## References
+- [How to install htop on CentOS Linux 8](https://www.cyberciti.biz/faq/how-to-install-htop-on-centos-linux-8/) - htop is nothing but an interactive process viewer for CentOS Linux 8 system
+- [How To Install the Apache Web Server on CentOS 8](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-centos-8)
