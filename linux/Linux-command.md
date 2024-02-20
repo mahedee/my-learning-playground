@@ -1,4 +1,4 @@
-Certainly! Here's a list of Linux terminal commands along with examples and short descriptions:
+# Linux Commands
 
 * __pwd__
    - Command: `pwd` - Print working directory
@@ -16,6 +16,7 @@ Certainly! Here's a list of Linux terminal commands along with examples and shor
    - ls -l /home - list the files in the home directory in long format.
    - ls - l /media - list the files in the media directory in long format.
    - Example: `s -l ..` - list the files in the parent directory in long format. 
+   - Example: `ls -a` - list all files, including hidden files.
 
 * __clear__
    - Command: `clear`
@@ -55,37 +56,37 @@ Certainly! Here's a list of Linux terminal commands along with examples and shor
    - Description: Creates a new directory.
    - Example: `mkdir new_directory`
 
-8. **rmdir**
+* __rmdir__
    - Command: `rmdir [directory]`
    - Description: Removes an empty directory.
    - Example: `rmdir empty_directory`
 
-__touch__
+* __touch__
    - Command: `touch [file]`
    - Description: Creates an empty file or updates the timestamp of an existing file.
    - Example: `touch new_file.txt`
 
-__nano__
+* __nano__
     - Command: `nano [file]`
     - Description: Opens the nano text editor to edit a file.
     - Example: `nano file.txt`
 
-__cat__
+* __cat__
     - Command: `cat [file]`
     - Description: Concatenates and displays the content of a file.
     - Example: `cat file.txt`
 
-11. **echo**
+* __echo__
     - Command: `echo [text]`
     - Description: Prints text to the terminal.
     - Example: `echo "Hello, Linux!"`
 
-12. **grep**
+* __grep__
     - Command: `grep [pattern] [file]`
     - Description: Searches for a pattern in a file.
     - Example: `grep "keyword" file.txt`
 
-__chmod__
+* __chmod__
     - Command: `chmod [permissions] [file]`
     - Description: Changes file permissions.
     - Example: `chmod +x script.sh` - add execute permission to the file 'script.sh' for the owner user
@@ -94,22 +95,22 @@ __chmod__
     - Example: `chmod go-rw file.txt` - remove read and write permissions for the group and others from the file 'file.txt'
     - Example: `chmod a+rwx script.sh` - add read, write, and execute permissions for all (owner, group, and others) to the file 'script.sh'
 
-14. **chown**
+* __chown__
     - Command: `chown [user]:[group] [file]`
     - Description: Changes the owner and group of a file.
     - Example: `chown user:group file.txt`
 
-15. **ps**
+* __ps__
     - Command: `ps`
     - Description: Displays information about active processes.
     - Example: `ps aux`
 
-16. **kill**
+* __kill__
     - Command: `kill [process_ID]`
     - Description: Sends a signal to terminate a process.
     - Example: `kill 1234`
 
-17. **man**
+* __man__
     - Command: `man [command]`
     - Description: Displays the manual page for a command.
     - Example: `man ls`
@@ -119,12 +120,12 @@ __chmod__
     - Description: Displays disk space usage.
     - Example: `df -h` - display disk space usage in human-readable format
 
-19. **du**
+* __du__
     - Command: `du [directory]`
     - Description: Displays disk usage of files in a directory.
     - Example: `du -sh /path/to/directory`
 
-20. **tar**
+* __tar__
     - Command: `tar [options] [archive_name] [files]`
     - Description: Creates or extracts tar archives.
     - Example: `tar -cvf archive.tar file1 file2`
@@ -194,6 +195,29 @@ __chmod__
     - Example: `systemctl status httpd` - view the status of the Apache web server service
     - Example: `sudo systemctl disable httpd` - disable the Apache web server service from starting at boot (requires sudo)
     - Example: `sudo systemctl stop  httpd` - stop the Apache web server service (requires sudo)
+
+*__iu__
+    - Command: `su - [username]`
+    - Description: Switches to another user account with a login shell.
+    - Example: `su - user2` - switch to the user account 'user2' with a login shell
+    - Example: `sudo -iu root` - switch to the root user account with a login shell (requires sudo)
+
+*__dmesg__
+    - Command: `dmesg`
+    - Description: Displays the kernel ring buffer messages.
+    - Example: `dmesg | less` - view the kernel messages page by page
+
+*__head__
+    - Command: `head [file]`
+    - Description: Displays the first few lines of a file.
+    - Example: `head file.txt` - display the first 10 lines of the file 'file.txt'
+    - Example: `head -n 20 file.txt` - display the first 20 lines of the file 'file.txt'
+
+*__tail__
+    - Command: `tail [file]`
+    - Description: Displays the last few lines of a file.
+    - Example: `tail file.txt` - display the last 10 lines of the file 'file.txt'
+    - Example: `tail -n 20 file.txt` - display the last 20 lines of the file 'file.txt'
 
 
 ## References
