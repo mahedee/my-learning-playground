@@ -75,6 +75,8 @@
     - Command: `cat [file]`
     - Description: Concatenates and displays the content of a file.
     - Example: `cat file.txt`
+    - Example: `cat /etc/passwd` - display the contents of the /etc/passwd file
+    - Example: ` cat /etc/group` - display the contents of the /etc/group file
 
 * __echo__
     - Command: `echo [text]`
@@ -161,6 +163,8 @@
     - Description: Executes a command with superuser privileges.
     - Example: `sudo dnf update` - update system packages with superuser privileges
     - Example: `sudo systemctl restart apache2` - restart the Apache web server with superuser privileges
+    - Example: `sudo !!` - repeat the last command with superuser privileges
+    - Example: `sudo adduser batman` - add a new user 'batman' with superuser privileges
 
 * __dnf__
     - Command: `dnf [options] [command] [package]`
@@ -196,28 +200,47 @@
     - Example: `sudo systemctl disable httpd` - disable the Apache web server service from starting at boot (requires sudo)
     - Example: `sudo systemctl stop  httpd` - stop the Apache web server service (requires sudo)
 
-*__iu__
+* __iu__
     - Command: `su - [username]`
     - Description: Switches to another user account with a login shell.
     - Example: `su - user2` - switch to the user account 'user2' with a login shell
     - Example: `sudo -iu root` - switch to the root user account with a login shell (requires sudo)
 
-*__dmesg__
+* __dmesg__
     - Command: `dmesg`
     - Description: Displays the kernel ring buffer messages.
     - Example: `dmesg | less` - view the kernel messages page by page
 
-*__head__
+* __head__
     - Command: `head [file]`
     - Description: Displays the first few lines of a file.
     - Example: `head file.txt` - display the first 10 lines of the file 'file.txt'
     - Example: `head -n 20 file.txt` - display the first 20 lines of the file 'file.txt'
 
-*__tail__
+* __tail__
     - Command: `tail [file]`
     - Description: Displays the last few lines of a file.
     - Example: `tail file.txt` - display the last 10 lines of the file 'file.txt'
     - Example: `tail -n 20 file.txt` - display the last 20 lines of the file 'file.txt'
+
+* __Change your password__
+    - Command: `passwd`
+    - Description: Change your password
+    - Example: `passwd` - change your password
+    - Example: `sudo passwd batman` - change the password for the user 'batman' with super-user privileges
+
+* __Remove user from the system__
+    - Command: `userdel [username]`
+    - Description: Remove a user from the system
+    - Example: `userdel batman` - remove the user 'batman' from the system
+    - Example: `sudo userdel batman` - remove the user 'batman' from the system with super-user privileges
+
+* __Create a group and add user to the group__
+    - Command: `groupadd [groupname]`
+    - Description: Create a new group
+    - Example: `groupadd developers` - create a new group 'developers'
+    - Example: `usermod -aG developers batman` - add the user 'batman' to the group 'developers'
+    - Example: `sudo groupdel developers` - remove the group 'developers' from the system with super-user privileges
 
 
 ## References
