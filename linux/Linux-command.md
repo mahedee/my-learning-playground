@@ -17,6 +17,9 @@
    - ls - l /media - list the files in the media directory in long format.
    - Example: `s -l ..` - list the files in the parent directory in long format. 
    - Example: `ls -a` - list all files, including hidden files.
+   - Example: `ls -l | wc` - count the number of files in the current directory.
+   - Example: `ls - l | wc -l` - count the number of lines in the output of the 'ls -l' command.
+
 
 * __clear__
    - Command: `clear`
@@ -77,6 +80,7 @@
     - Example: `cat file.txt`
     - Example: `cat /etc/passwd` - display the contents of the /etc/passwd file
     - Example: ` cat /etc/group` - display the contents of the /etc/group file
+    - Example: `cat file.txt | sort | uniq` - display the unique lines in the file.txt sorted by alphabetical order
 
 * __echo__
     - Command: `echo [text]`
@@ -87,6 +91,8 @@
     - Command: `grep [pattern] [file]`
     - Description: Searches for a pattern in a file.
     - Example: `grep "keyword" file.txt`
+    - Example: ` ls -l | grep file` - search for the word 'file' in the output of the 'ls -l' command
+    - Example: `cat file.txt | grep -v test1.txt` - display lines in file.txt that do not contain the word 'test1.txt'
 
 * __chmod__
     - Command: `chmod [permissions] [file]`
@@ -241,6 +247,21 @@
     - Example: `groupadd developers` - create a new group 'developers'
     - Example: `usermod -aG developers batman` - add the user 'batman' to the group 'developers'
     - Example: `sudo groupdel developers` - remove the group 'developers' from the system with super-user privileges
+
+* __history__
+    - Command: `history`
+    - Description: Displays the command history.
+    - Example: `history` - display the command history
+    - Example: `history 10` - display the last 10 commands in the history
+    - Example: `!100` - repeat the command with the number 100 from the history
+
+* __Output Redirection__
+    - Command: `command > file`
+    - Description: Redirects the output of a command to a file.
+    - Example: `ls -l > file.txt` - save the output of the 'ls' command to a file 'file.txt'
+    - Example: `ls -l >> file.txt` - append the output of the 'ls' command to a file 'file.txt'
+    - Example: `echo "Hello, Linux!" > greeting.txt` - save the output of the 'echo' command to a file 'greeting.txt'
+    - Example: `cat file1.txt file2.txt > combined_files.txt` - save the output of the 'cat' command to a file 'combined_files.txt'
 
 
 ## References

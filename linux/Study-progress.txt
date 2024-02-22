@@ -1,2 +1,2 @@
 1. FreeCodeCamp.org - Introduction to Linux – Full Course for Beginners (1:14:30/6:07:31) - https://www.youtube.com/watch?v=sWbUDq4S6Y8
-2. Linux Commands for Beginners - https://www.youtube.com/playlist?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ - Complete up to video no : 13/24
+2. Linux Commands for Beginners - https://www.youtube.com/playlist?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ - Complete up to video no : 17/24
