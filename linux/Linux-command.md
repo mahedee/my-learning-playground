@@ -263,6 +263,15 @@
     - Example: `echo "Hello, Linux!" > greeting.txt` - save the output of the 'echo' command to a file 'greeting.txt'
     - Example: `cat file1.txt file2.txt > combined_files.txt` - save the output of the 'cat' command to a file 'combined_files.txt'
 
+* __find__
+    - Command: `find [directory] -name [filename]`
+    - Description: Searches for files in a directory.
+    - Example: `find /home -name file.txt` - search for the file 'file.txt' in the /home directory
+    - Example: `find / -name file.txt` - search for the file 'file.txt' in the root directory
+    - Example: `find / -name "*.txt"` - search for all files with the .txt extension in the root directory
+    - Example: `find / -type f -name "*.txt"` - search for all regular files with the .txt extension in the root directory
+    - Example: `find / -type d -name "dir*"` - search for all directories starting with 'dir' in the root directory
+
 
 ## References
 - [How to install htop on CentOS Linux 8](https://www.cyberciti.biz/faq/how-to-install-htop-on-centos-linux-8/) - htop is nothing but an interactive process viewer for CentOS Linux 8 system
