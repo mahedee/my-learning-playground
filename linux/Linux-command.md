@@ -1,15 +1,12 @@
 # Linux Commands
 
-* __pwd__
-   - Command: `pwd` - Print working directory
-   - Description: Prints the current working directory.
-   - Example: `pwd`
 
 * __ls__
    - Command: `ls`
    - Description: Lists files and directories in the current directory.
-   - Example: `ls`
-   - ls means list or list segments.
+   - Example: `ls` - list the files in the current directory
+   - Example: `ls -ltr` - list files in long format sorted by time in reverse order.
+   - Example: `ls -ld` - list the current directory in long format
    - ls / - list the root directory
    - ls /home - list the home directory
    - ls -l - list the files in long format, including permissions, number of links, owner, group, size, and time of last modification.
@@ -21,23 +18,68 @@
    - Example: `ls - l | wc -l` - count the number of lines in the output of the 'ls -l' command.
 
 
+* __mkdir__
+   - Command: `mkdir [directory]`
+   - Description: Creates a new directory.
+   - Example: `mkdir new_directory`
+
+* __cd__
+    - Command: `cd [directory]`
+    - Description: Changes the current directory.
+    - Example: `cd Documents`
+    - `cd ~` - change to the home directory
+    - `cd ..` - change to the parent directory
+
+* __pwd__
+   - Command: `pwd` - Print working directory
+   - Description: Prints the current working directory.
+   - Example: `pwd`
+
+
+* __chmod__
+    - Command: `chmod [permissions] [file]`
+    - Description: Changes file permissions.
+    - Example: `chmod +x script.sh` - add execute permission to the file 'script.sh' for the owner user
+    - Example: `chmod 755 script.sh` - set the file 'script.sh' to have read, write, and execute permissions for the owner user, and read and execute permissions for the group and others
+    - Example: `chmod u+x script.sh` - add execute permission to the file 'script.sh' for the owner user only
+    - Example: `chmod go-rw file.txt` - remove read and write permissions for the group and others from the file 'file.txt'
+    - Example: `chmod a+rwx script.sh` - add read, write, and execute permissions for all (owner, group, and others) to the file 'script.sh'
+    - chmod 777 file.zip - give full permissions to everyone (user, group, other) on the file file.zip
+
+
+* __df__
+    - Command: `df`
+    - Description: Displays disk space usage.
+    - Example: `df -h` - display disk space usage in human-readable format
+
+* __su__
+    - Command: `su [username]`
+    - Description: Switches to another user account.
+    - Example: `su user2` - switch to the user account 'user2
+    - Example: `su - user2` - switch to the user account 'user2' with a login shell
+
+* __unzip__
+    - Command: `unzip [file.zip]`
+    - Description: Extracts files from a zip archive.
+    - Example: `unzip file.zip` - extract files from the file.zip archive
+    - Example: `unzip -d /path/to/destination file.zip` - extract files from the file.zip archive to the specified destination directory
+    - Example: `unzip -l file.zip` - list the contents of the file.zip archive without extraction
+
+
 * __clear__
    - Command: `clear`
    - Description: Clears the terminal screen.
    - Example: `clear`
 
-* __cd__
-   - Command: `cd [directory]`
-   - Description: Changes the current directory.
-   - Example: `cd Documents`
-   - `cd ~` - change to the home directory
-   - `cd ..` - change to the parent directory
+
 
 * __cp__
    - Command: `cp [source] [destination]`
    - Description: Copies files or directories.
    - Example: `cp file.txt /path/to/destination`
    - Example: `cp test2.txt newfile.txt`
+   - Example: `cp /path/to/source/file.zip .` - copy the file.zip from the source directory to the current directory
+
 
 * __mv__
    - Command: `mv [source] [destination]`
@@ -54,10 +96,7 @@
    - Description: Removes (deletes) files.
    - Example: `rm old_file.txt`
 
-* __mkdir__
-   - Command: `mkdir [directory]`
-   - Description: Creates a new directory.
-   - Example: `mkdir new_directory`
+
 
 * __rmdir__
    - Command: `rmdir [directory]`
@@ -94,14 +133,7 @@
     - Example: ` ls -l | grep file` - search for the word 'file' in the output of the 'ls -l' command
     - Example: `cat file.txt | grep -v test1.txt` - display lines in file.txt that do not contain the word 'test1.txt'
 
-* __chmod__
-    - Command: `chmod [permissions] [file]`
-    - Description: Changes file permissions.
-    - Example: `chmod +x script.sh` - add execute permission to the file 'script.sh' for the owner user
-    - Example: `chmod 755 script.sh` - set the file 'script.sh' to have read, write, and execute permissions for the owner user, and read and execute permissions for the group and others
-    - Example: `chmod u+x script.sh` - add execute permission to the file 'script.sh' for the owner user only
-    - Example: `chmod go-rw file.txt` - remove read and write permissions for the group and others from the file 'file.txt'
-    - Example: `chmod a+rwx script.sh` - add read, write, and execute permissions for all (owner, group, and others) to the file 'script.sh'
+
 
 * __chown__
     - Command: `chown [user]:[group] [file]`
@@ -123,10 +155,7 @@
     - Description: Displays the manual page for a command.
     - Example: `man ls`
 
-* __df__
-    - Command: `df`
-    - Description: Displays disk space usage.
-    - Example: `df -h` - display disk space usage in human-readable format
+
 
 * __du__
     - Command: `du [directory]`
@@ -180,10 +209,7 @@
     - Example: `dnf update` - update all installed packages
     - Example: `dnf list` - list all installed packages
 
-* __su__
-    - Command: `su [username]`
-    - Description: Switches to another user account.
-    - Example: `su user2` - switch to the user account 'user2
+
 
 * __yum__
     - Command: `yum [options] [command] [package]`
