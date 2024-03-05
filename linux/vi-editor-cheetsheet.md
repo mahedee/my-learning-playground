@@ -1,0 +1,76 @@
+## Vi editor cheatsheet
+
+### Modes:
+- **Command mode**: When you first open a file, you are placed into command mode. This mode allows you to move around the file and perform operations, such as cutting and pasting text.
+- `i` - insert mode (type text)
+- `a` - append mode (insert text after cursor)
+- `o` - open mode (start a new line below the cursor)   
+- `:` - command-line mode (for saving, exiting, etc.)
+### Navigation:
+- `hjkl` or arrow keys - move the cursor left/down/up/right
+- `/pattern` - search forwards for the pattern (use `:nohlsearch` to remove highlighting)
+- `?pattern` - search backwards for the pattern
+- `G` - go to end of file
+- `g G` - go to end of file and clear screen
+- `H` / `M` / `L` - move to top/middle/bottom of screen
+- `%` - jump to matching bracket if it's on the same line. Otherwise, move to the matching bracket.
+### Editing:
+- `x` - delete character under the cursor
+- `X` - delete character before the cursor
+- `dw` - delete word at the cursor
+- `"+dw` - delete word and copy it to the system clipboard
+- `d$` / `D` - delete to the end of the line
+- `"+d$"/"+D` - delete to the end of the line and copy it to the system clipboard
+- `y` / `yy` / `Y` - yank (copy) the current line / selection
+- `"+y` / `"+yy` / `"+Y` - yank (copy) the current line / selection to the system clipboard
+- `p` / `P` - paste the yanked text after / before the cursor
+- `J` - join the current line with the next line
+- `=` - auto-indent the current line
+- `#` / `=~` - format the current line as a comment / as code
+- `@` - repeat the last substitution
+- `.` - repeat the last command
+### Marks:
+- `m{a-z}` - set a mark at the cursor position
+- `'{a-z}` - jump to the line of the mark {a-z}
+- `''` - jump to the line where the cursor was before the latest jump
+- `^` - jump to the beginning of the line
+- `$` - jump to the end of the line
+- `(` / `[` - jump to the beginning of the sentence / paragraph
+- `)` / `]` - jump to the end of the sentence / paragraph
+- `{num}` - jump to the specified line number
+- `-` / `_` - jump to the first non-blank character of the line
+- `|` - jump to the column specified by the cursor position (1-based)
+- `0` - jump to the start of the line
+- `^` - jump to the start of the line (first non-blank character)   
+- `g_` - jump to the end of the line (last non-blank character)
+- `{` / `}` - jump to the previous / next paragraph
+- `[[` / `]]` - jump to the previous / next section heading
+- `gg` / `1gt` - jump to the first line / tab page 1
+- `G` / `gt` - jump to the last line / tab page
+- `:b #` / `:sb #` - jump to the last buffer / split window containing "foo" in its name
+- `:bf` / `:sbf` - jump to the first buffer / split window  
+- `:bd #` / `:bdelete #` - delete the last buffer / split window
+- `:bd` / `:bdelete` - delete the current buffer / split window
+- `:ls` - list all buffers
+- `:b #` - switch to buffer #
+- `:n` / `:next` - go to the next buffer / split window
+
+### Visual mode:
+- `v` - start visual mode, select characters
+- `V` - start visual mode, select lines
+- `<C-v>` - start visual block mode, select blocks
+- `o` / `O` -   move to the other end of the marked area    
+
+### Command-line mode:  
+- `/pattern` - search forwards for the pattern
+
+### Shortcuts
+- `ZZ` - save and exit
+- `ZQ` - quit without saving changes    
+- `:w` - save the file
+- `:q` - quit without saving changes
+- `:qa!` - force all unsaved changes to be lost and quit all windows
+- `:help :help` - open help for the `:help` command
+- `:help` - open help for the last command
+- `:help {subject}` - open help for {subject}
+- `:help` - open help for the last command
