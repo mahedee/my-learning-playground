@@ -2,7 +2,7 @@
 
 
 * __ls__
-   - Command: `ls`
+   - Command: `ls` - List
    - Description: Lists files and directories in the current directory.
    - Example: `ls` - list the files in the current directory
    - Example: `ls -ltr` - list files in long format sorted by time in reverse order.
@@ -37,6 +37,7 @@
 
 
 * __chmod__
+    - chmod - change file mode
     - Command: `chmod [permissions] [file]`
     - Description: Changes file permissions.
     - Example: `chmod +x script.sh` - add execute permission to the file 'script.sh' for the owner user
@@ -48,7 +49,7 @@
 
 
 * __df__
-    - Command: `df`
+    - Command: `df` - Disk Free
     - Description: Displays disk space usage.
     - Example: `df -h` - display disk space usage in human-readable format
 
@@ -95,6 +96,7 @@
    - Command: `rm [file]`
    - Description: Removes (deletes) files.
    - Example: `rm old_file.txt`
+   - Example: `rm file.txt file2.txt` - remove multiple files
 
 
 
@@ -120,6 +122,7 @@
     - Example: `cat /etc/passwd` - display the contents of the /etc/passwd file
     - Example: ` cat /etc/group` - display the contents of the /etc/group file
     - Example: `cat file.txt | sort | uniq` - display the unique lines in the file.txt sorted by alphabetical order
+    - Example: `cat /etc/hosts` - display the contents of the /etc/hosts file
 
 * __echo__
     - Command: `echo [text]`
@@ -298,6 +301,12 @@
     - Example: `find / -type f -name "*.txt"` - search for all regular files with the .txt extension in the root directory
     - Example: `find / -type d -name "dir*"` - search for all directories starting with 'dir' in the root directory
 
+* __To get host information__
+    - Command: `hostname`
+    - Description: Displays the system's hostname.
+    - Example: `hostname` - display the system's hostname
+    - Example: `hostname -I` - display the system's IP address
+    - Example: `cat /etc/hosts` - display the contents of the /etc/hosts file
 
 ## References
 - [How to install htop on CentOS Linux 8](https://www.cyberciti.biz/faq/how-to-install-htop-on-centos-linux-8/) - htop is nothing but an interactive process viewer for CentOS Linux 8 system
