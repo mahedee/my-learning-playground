@@ -300,6 +300,12 @@
     - Example: `find / -name "*.txt"` - search for all files with the .txt extension in the root directory
     - Example: `find / -type f -name "*.txt"` - search for all regular files with the .txt extension in the root directory
     - Example: `find / -type d -name "dir*"` - search for all directories starting with 'dir' in the root directory
+    - Example: `find / -name *.log 2> /dev/null` - search for all files with the .log extension in the root directory and discard error messages using /dev/null
+    - Example: `find -name Music` - search for the directory named 'Music' in the current directory
+    - Example: `find /var/log -type f -name *.log -mtime -7` - search for log files modified in the last 7 days in the /var/log directory
+    - Example: `sudo find /var/log -type f -name *.log* -mtime -7 -exec rm {} \;` - remove log files modified in the last 7 days in the /var/log directory with super-user privileges
+
+
 
 * __To get host information__
     - Command: `hostname`
