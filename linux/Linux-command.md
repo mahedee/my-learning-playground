@@ -308,6 +308,26 @@
     - Example: `hostname -I` - display the system's IP address
     - Example: `cat /etc/hosts` - display the contents of the /etc/hosts file
 
+* __Variable__
+
+    - Command: `variable_name=value`
+    - Description: Assigns a value to a variable.
+    - Example: `name="John"` - assign the value "John" to the variable 'name'
+    - Example: `echo $name` - display the value of the variable 'name'
+    - Example: `echo "Hello, $name"` - display the value of the variable 'name' in a greeting message
+    - Example: `echo "Hello, ${name}"` - display the value of the variable 'name' in a greeting message
+    - Example: MY_DIR="/etc";echo $MY_DIR; ls $MY_DIR; - assign the value "/etc" to the variable 'MY_DIR' and use it to display the contents of the /etc directory
+
+* __env__
+    - Command: `env`
+    - Description: Displays the current environment variables.
+    - Example: `env` - display the current environment variables
+    - Example: `env | grep PATH` - search for the environment variable 'PATH' in the output of the 'env' command
+    - Example: `export MY_VAR="Hello"` - set the environment variable 'MY_VAR' to the value "Hello"
+    - Example: `echo $MY_VAR` - display the value of the environment variable 'MY_VAR'
+    - Now you can check the value of the environment variable 'MY_VAR' using the `env` command.
+
+
 ## References
 - [How to install htop on CentOS Linux 8](https://www.cyberciti.biz/faq/how-to-install-htop-on-centos-linux-8/) - htop is nothing but an interactive process viewer for CentOS Linux 8 system
 - [How To Install the Apache Web Server on CentOS 8](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-centos-8)
