@@ -80,6 +80,7 @@
    - Example: `cp file.txt /path/to/destination`
    - Example: `cp test2.txt newfile.txt`
    - Example: `cp /path/to/source/file.zip .` - copy the file.zip from the source directory to the current directory
+   - Example: `cp -r /home/mahedee/temp . ` - copy the temp directory from the /home/mahedee directory to the current directory
 
 
 * __mv__
@@ -97,6 +98,7 @@
    - Description: Removes (deletes) files.
    - Example: `rm old_file.txt`
    - Example: `rm file.txt file2.txt` - remove multiple files
+   - Example: `rm -r directory` - remove a directory and its contents. Means remove a non empty directory
 
 
 
