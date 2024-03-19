@@ -101,7 +101,6 @@
    - Example: `rm -r directory` - remove a directory and its contents. Means remove a non empty directory
 
 
-
 * __rmdir__
    - Command: `rmdir [directory]`
    - Description: Removes an empty directory.
