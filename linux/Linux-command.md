@@ -124,6 +124,8 @@
     - Example: ` cat /etc/group` - display the contents of the /etc/group file
     - Example: `cat file.txt | sort | uniq` - display the unique lines in the file.txt sorted by alphabetical order
     - Example: `cat /etc/hosts` - display the contents of the /etc/hosts file
+    - Example: `cat /etc/os-release` - display the contents of the /etc/os-release file which contains information about the Linux distribution running on your system
+    
 
 * __echo__
     - Command: `echo [text]`
@@ -136,8 +138,6 @@
     - Example: `grep "keyword" file.txt`
     - Example: ` ls -l | grep file` - search for the word 'file' in the output of the 'ls -l' command
     - Example: `cat file.txt | grep -v test1.txt` - display lines in file.txt that do not contain the word 'test1.txt'
-
-
 
 * __chown__
     - Command: `chown [user]:[group] [file]`
@@ -334,6 +334,36 @@
     - Example: `echo $MY_VAR` - display the value of the environment variable 'MY_VAR'
     - Now you can check the value of the environment variable 'MY_VAR' using the `env` command.
 
+* __lsblk__
+    - Command: `lsblk`
+    - Description: Lists information about block devices.
+    - Example: `lsblk` - list information about block devices
+    - Example: `lsblk -f` - list information about block devices with filesystem details
+    - Example: `lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINT` - list specific columns of information about block devices
+    - Example: `lsblk -a` - list all devices, including empty ones
+    - Example: `lsblk -l` - list devices without tree format
+    - Example: `lsblk -p` - list devices with the full path name
+    - Example: `lsblk -n` - list devices without heading
+    - Example: `lsblk -S` - list devices with SCSI information
+    - Example: `lsblk -d` - list devices without children
+    - Example: `lsblk -t` - list devices with topology information
+    - Example: `lsblk -x` - list devices with XML output
+    - Example: `lsblk -m` - list devices with major and minor numbers
+    - Example: `lsblk -P` - list devices with key-value pairs
+    - Example: `lsblk -J` - list devices with JSON output
+    - Example: `lsblk -D` - list devices with discard information
+    - Example: `lsblk -O` - list devices with extra information
+    - Example: `lsblk -r` - list devices with raw output
+    - Example: `lsblk -s` - list devices with serial number
+    - Example: `lsblk -t` - list devices with topology information
+    - Example: `lsblk -u` - list devices with UUIDs
+    - Example: `lsblk -x` - list devices with XML output
+    - Example: `lsblk -z` - list devices with size in bytes
+    - Example: `lsblk -h` - list devices with human-readable output
+    - Example: `lsblk -b` - list devices with size in bytes
+    - Example: `lsblk -k` - list devices with size in kilobytes
+    - Example: `lsblk -m` - list devices with size in megabytes
+    - Example: `lsblk -g` - list devices with size in gigabytes
 
 ## References
 - [How to install htop on CentOS Linux 8](https://www.cyberciti.biz/faq/how-to-install-htop-on-centos-linux-8/) - htop is nothing but an interactive process viewer for CentOS Linux 8 system

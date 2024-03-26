@@ -1,11 +1,50 @@
 ## Vi editor cheatsheet
 
+### Shortcuts
+- `:q` - quit without saving changes
+- `:w` - write and save the file
+- `:w file2.txt` - write the contents of the file to file2.txt
+- `:wq` - write and save the file and quit
+- `:q!` - quit without saving changes, even if there are unsaved modifications
+- `:wq!` - write and save the file and quit, even if there are unsaved modifications
+- `0` - move to the beginning of the line
+- `$` - move to the end of the line
+- `esc + u ` - undo the last change
+- `ctrl + r` - redo the last change
+- `x` - delete the character under the cursor
+- `dd` - delete the current line
+- `:r file2.txt` - read the contents of file2.txt and insert them after the current line
+- `:e file2.txt` - open file2.txt for editing
+- `:bn` - buffer next - go to the next buffer
+- `:bp` - buffer previous - go to the previous buffer
+- `:enew` - create a new buffer
+
+
+- `ZZ` - save and exit
+- `ZQ` - quit without saving changes    
+- `:qa!` - force all unsaved changes to be lost and quit all windows
+- `:help :help` - open help for the `:help` command
+- `:help` - open help for the last command
+- `:help {subject}` - open help for {subject}
+- `:help` - open help for the last command
+
+### Commands
+  * __vim__
+    - `vim filename` - open a file in vim. If no arguments are provided, it opens an empty file.
+
+
 ### Modes:
 - **Command mode**: When you first open a file, you are placed into command mode. This mode allows you to move around the file and perform operations, such as cutting and pasting text.
 - `i` - insert mode (type text)
 - `a` - append mode (insert text after cursor)
 - `o` - open mode (start a new line below the cursor)   
 - `:` - command-line mode (for saving, exiting, etc.)
+- `esc` - return to command mode from insert mode or other modes
+- `:q!` - quit without saving changes
+- `:wq` - save and exit
+- `esc + u ` - undo the last change
+
+
 ### Navigation:
 - `hjkl` or arrow keys - move the cursor left/down/up/right
 - `/pattern` - search forwards for the pattern (use `:nohlsearch` to remove highlighting)
@@ -64,13 +103,3 @@
 ### Command-line mode:  
 - `/pattern` - search forwards for the pattern
 
-### Shortcuts
-- `ZZ` - save and exit
-- `ZQ` - quit without saving changes    
-- `:w` - save the file
-- `:q` - quit without saving changes
-- `:qa!` - force all unsaved changes to be lost and quit all windows
-- `:help :help` - open help for the `:help` command
-- `:help` - open help for the last command
-- `:help {subject}` - open help for {subject}
-- `:help` - open help for the last command
