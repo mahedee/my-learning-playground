@@ -18,7 +18,8 @@
 - `:bn` - buffer next - go to the next buffer
 - `:bp` - buffer previous - go to the previous buffer
 - `:enew` - create a new buffer
-
+- `y` / `yy` / `Y` - yank (copy) the current line / selection
+- `p` / `P` - paste the yanked text after / before the cursor
 
 - `ZZ` - save and exit
 - `ZQ` - quit without saving changes    
@@ -28,9 +29,34 @@
 - `:help {subject}` - open help for {subject}
 - `:help` - open help for the last command
 
+### Frequently Asked Questions
+* How to sort lines in vi editor?
+    - Press `v` for visual mode. Select the lines you want to sort. `:'<,'>sort ui` and press enter. This will sort the selected lines in ascending order. To sort in descending order, use `:'<,'>sort u!` and press enter.  
+* How to search and replace in vi editor?
+    - Press `:` to enter command mode. Type `s/search/replace/g` and press enter. This will replace all occurrences of `search` with `replace`. To replace only the first occurrence, use `s/search/replace/`. To replace all occurrences in a line, use `:s/search/replace/g`. To replace all occurrences in the entire file, use `:%s/search/replace/g`.   
+    
+ * How to page up and down in vi editor?
+    - Press `ctrl + f` to page down and `ctrl + b` to page up.
+    - Press `gg` to go to the beginning of the file and `G` to go to the end of the file.
+
+ * How to copy and paste in vi editor?
+    - Press `v` to enter visual mode. Use the arrow keys to select the text you want to copy. Press `y` to yank (copy) the selected text. Move the cursor to the location where you want to paste the text. Press `p` to paste the copied text after the cursor or `P` to paste before the cursor.
+
+  * How to split the screen in vi editor?
+    - Press `:sp` to split the screen horizontally. Press `:vsp` to split the screen vertically. Press `ctrl + w` followed by `h`, `j`, `k`, or `l` to move between the split windows. Press `ctrl + w` followed by `c` to close the current split window.
+
+  * How to set number lines in vi editor?
+    - Press `:set number` to display line numbers. Press `:set nonumber` to hide line numbers.
+
+   * How to set line number for vi editor using .vimrc file?
+    - Add the following line to your `.vimrc` file: `set number`. Save the file and restart vim. Line numbers will now be displayed by default. .vimrc file is located in the home directory.
+
 ### Commands
   * __vim__
     - `vim filename` - open a file in vim. If no arguments are provided, it opens an empty file.
+    - `vim +20 filename` - open a file and move the cursor to line 20.
+    - `vim -o readme.txt file2.txt` - open files in horizontal split windows.
+    - `vim -O readme.txt file2.txt` - open files in vertical split windows.
 
 
 ### Modes:
@@ -43,6 +69,7 @@
 - `:q!` - quit without saving changes
 - `:wq` - save and exit
 - `esc + u ` - undo the last change
+- `v` - visual mode (select characters)
 
 
 ### Navigation:
