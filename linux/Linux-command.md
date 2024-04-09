@@ -80,6 +80,7 @@
    - Example: `cp file.txt /path/to/destination`
    - Example: `cp test2.txt newfile.txt`
    - Example: `cp /path/to/source/file.zip .` - copy the file.zip from the source directory to the current directory
+   - Example: `cp /path/to/source/* /path/to/destination/` - copy all files from the source directory to the destination directory
    - Example: `cp -r /home/mahedee/temp . ` - copy the temp directory from the /home/mahedee directory to the current directory
 
 
@@ -204,6 +205,7 @@
     - Example: `sudo systemctl restart apache2` - restart the Apache web server with superuser privileges
     - Example: `sudo !!` - repeat the last command with superuser privileges
     - Example: `sudo adduser batman` - add a new user 'batman' with superuser privileges
+    - Example: `sudo -iu oracle` - switch to the oracle user account with superuser privileges
 
 * __dnf__
     - Command: `dnf [options] [command] [package]`
