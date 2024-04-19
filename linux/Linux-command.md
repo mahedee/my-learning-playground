@@ -146,7 +146,7 @@
 * __grep__
     - Command: `grep [pattern] [file]`
     - Description: Searches for a pattern in a file.
-    - Example: `grep "keyword" file.txt`
+    - Example: `grep keyword file.txt` - search for the word 'keyword' in the file 'file.txt'
     - Example: ` ls -l | grep file` - search for the word 'file' in the output of the 'ls -l' command
     - Example: `cat file.txt | grep -v test1.txt` - display lines in file.txt that do not contain the word 'test1.txt'
 
