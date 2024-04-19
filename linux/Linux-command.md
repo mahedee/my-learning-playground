@@ -126,6 +126,16 @@
     - Example: `cat file.txt | sort | uniq` - display the unique lines in the file.txt sorted by alphabetical order
     - Example: `cat /etc/hosts` - display the contents of the /etc/hosts file
     - Example: `cat /etc/os-release` - display the contents of the /etc/os-release file which contains information about the Linux distribution running on your system
+
+* __trail__
+    - Command: `tail [file]`
+    - Description: Displays the last few lines of a file.
+    - Example: `tail file.txt`
+    - Example: `tail -f -100 application.log` - display the last 100 lines of the application.log file and continue to display new lines as they are added to the file
+    - Example: `tail -100 applogfile  > newLogfile` - display the last 100 lines of the applogfile file and save them to a new file named newLogfile 
+    - Example: `tail -f file.txt` - display the last 10 lines of the file 'file.txt' and continue to display new lines as they are added to the file
+    - Example: `tail -n 20 file.txt` - display the last 20 lines of the file 'file.txt'
+    - Example: `tail -f /var/log/messages` - display the last 10 lines of the /var/log/messages file and continue to display new lines as they are added to the file
     
 
 * __echo__
