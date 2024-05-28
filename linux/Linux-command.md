@@ -16,6 +16,8 @@
    - Example: `ls -a` - list all files, including hidden files.
    - Example: `ls -l | wc` - count the number of files in the current directory.
    - Example: `ls - l | wc -l` - count the number of lines in the output of the 'ls -l' command.
+   - Example: `ls -ltr /usr/lib/jvm/` - list the files in the /usr/lib/jvm/ directory in long format sorted by time in reverse order.
+   - Example: `ls -l /etc/alternatives` - list the files in the /etc/alternatives directory in long format.
 
 
 * __mkdir__
@@ -376,6 +378,15 @@
     - Example: `lsblk -k` - list devices with size in kilobytes
     - Example: `lsblk -m` - list devices with size in megabytes
     - Example: `lsblk -g` - list devices with size in gigabytes
+
+* __openssl__
+    - Command: `openssl`
+    - Description: OpenSSL command-line tool.
+    - Example: `openssl version` - display the OpenSSL version
+    - Example: `openssl help` - display the OpenSSL help message
+    - Example: `openssl list -digest-commands` - list available digest commands
+    - Example: `openssl list -cipher-commands` - list available cipher commands
+    - Example: `openssl list -public-key-algorithms` - list available public key algorithms
 
 ## References
 - [How to install htop on CentOS Linux 8](https://www.cyberciti.biz/faq/how-to-install-htop-on-centos-linux-8/) - htop is nothing but an interactive process viewer for CentOS Linux 8 system

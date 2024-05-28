@@ -43,18 +43,7 @@ Hosting kothay kortechen - API - Sequlize - ORM
 
 
 
-Assalamualikum
-Microsoft Technical Community Bangladesh er pokkho theke sobaike janacchi suveccha sagogotm.
-Ajke Tech Talk Episoed 13 e, Amader sathe ache
-
-Rezwanur Rahman
-Microsoft MVP - Microsoft Graph Development
-CEO and Managing Director, Backend Group
-
-r aj ke rezwan je topic ta niye discuss korbe ta hocche
-Microsoft Copilot in Power Apps
-
-So, welcome Rezwan. Let's start. Over to you. 
+https://web.comillaboard.gov.bd/bisecb/eseba_details/1
 
 
 
