@@ -18,8 +18,6 @@
    - Example: `ls - l | wc -l` - count the number of lines in the output of the 'ls -l' command.
    - Example: `ls -ltr /usr/lib/jvm/` - list the files in the /usr/lib/jvm/ directory in long format sorted by time in reverse order.
    - Example: `ls -l /etc/alternatives` - list the files in the /etc/alternatives directory in long format.
-
-
 * __mkdir__
    - Command: `mkdir [directory]`
    - Description: Creates a new directory.
@@ -80,7 +78,7 @@
    - Command: `cp [source] [destination]`
    - Description: Copies files or directories.
    - Example: `cp file.txt /path/to/destination`
-   - Example: `cp test2.txt newfile.txt`
+   - Example: `cp test2.txt newfile.txt` - copy the contents of test2.txt to newfile.txt
    - Example: `cp /path/to/source/file.zip .` - copy the file.zip from the source directory to the current directory
    - Example: `cp /path/to/source/* /path/to/destination/` - copy all files from the source directory to the destination directory
    - Example: `cp -r /home/mahedee/temp . ` - copy the temp directory from the /home/mahedee directory to the current directory
@@ -387,6 +385,44 @@
     - Example: `openssl list -digest-commands` - list available digest commands
     - Example: `openssl list -cipher-commands` - list available cipher commands
     - Example: `openssl list -public-key-algorithms` - list available public key algorithms
+
+* __export__
+    - Example: `export` - display all environment variables
+    - Command: `export [variable_name]=[value]`
+    - Description: Sets an environment variable.
+    - Example: `export MY_VAR="Hello"` - set the environment variable 'MY_VAR' to the value "Hello"
+    - Example: `echo $MY_VAR` - display the value of the environment variable 'MY_VAR'
+    - Example: `export PATH="/usr/local/bin":$PATH` - add a directory to the PATH environment variable
+
+* __less__
+    - Command: `less [file]`
+    - Description: Displays the contents of a file one page at a time.
+    - Example: `less file.txt` - display the contents of the file 'file.txt' one page at a time
+    - Example: `less /etc/passwd` - display the contents of the /etc/passwd file one page at a time
+    - Example: `less /etc/group` - display the contents of the /etc/group file one page at a time
+    - Example: `less /etc/hosts` - display the contents of the /etc/hosts file one page at a time
+    - Example: `less /etc/os-release` - display the contents of the /etc/os-release file one page at a time
+
+
+* __curl__
+    - Command: `curl [URL]`
+    - Description: Transfer data from or to a server.
+    - Example: `curl https://www.example.com` - download the contents of the URL 'https://www.example.com'
+    - Example: `curl -v https://www.example.com` - display verbose output when downloading the contents of the URL 'https://www.example.com'
+    - Example: `curl -k https://www.example.com` - allow insecure SSL connections when downloading the contents of the URL 'https://www.example.com'
+    - Example: `curl -vk https://www.example.com` - display verbose output and allow insecure SSL connections when downloading the contents of the URL 'https://www.example.com'
+    - Example: `curl -I https://www.example.com` - display the headers of the URL 'https://www.example.com'
+    - Example: `curl -O https://www.example.com/file.txt` - download the file 'file.txt' from the URL 'https://www.example.com'
+    - Example: `curl -L https://www.example.com` - follow redirects when downloading the contents of the URL 'https://www.example.com'
+    - Example: `curl -X POST -d "param1=value1&param2=value2" https://www.example.com` - send a POST request with data to the URL 'https://www.example.com'
+    - Example: `curl -u username:password https://www.example.com` - authenticate with a username and password when downloading the contents of the URL 'https://www.example.com'
+    - Example: `curl -v https://www.example.com` - display verbose output when downloading the contents of the URL 'https://www.example.com'
+    - Example: `curl -s https://www.example.com` - suppress progress meter output when downloading the contents of the URL 'https://www.example.com'
+    - Example: `curl -o output.txt https://www.example.com` - save the output of the URL 'https://www.example.com' to a file 'output.txt'
+    - Example: `curl -x proxy.example.com:8080 https://www.example.com` - use a proxy server when downloading the contents of the URL 'https://www.example.com'
+    - Example: `curl -A "Mozilla/5.0" https://www.example.com` - set the user-agent header when downloading the contents of the URL 'https://www.example.com'
+    - Example: `curl -H "Accept: application/json" https://www.example.com` - set a custom header when downloading the contents of the URL 'https://www.example.com'
+    - Example: `curl -I https://www.example.com` - display the headers of the URL
 
 ## References
 - [How to install htop on CentOS Linux 8](https://www.cyberciti.biz/faq/how-to-install-htop-on-centos-linux-8/) - htop is nothing but an interactive process viewer for CentOS Linux 8 system
