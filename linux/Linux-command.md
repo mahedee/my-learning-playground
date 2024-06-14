@@ -22,6 +22,7 @@
    - Command: `mkdir [directory]`
    - Description: Creates a new directory.
    - Example: `mkdir new_directory`
+   - Example: `mkdir -p new_directory/sub_directory` - create a new directory with a subdirectory
 
 * __cd__
     - Command: `cd [directory]`
@@ -423,6 +424,12 @@
     - Example: `curl -A "Mozilla/5.0" https://www.example.com` - set the user-agent header when downloading the contents of the URL 'https://www.example.com'
     - Example: `curl -H "Accept: application/json" https://www.example.com` - set a custom header when downloading the contents of the URL 'https://www.example.com'
     - Example: `curl -I https://www.example.com` - display the headers of the URL
+
+# tnsping
+- Command: `tnsping [TNS_ALIAS]`
+- Description: Tests the connection to an Oracle database service.
+- Example: `tnsping ORCL` - test the connection to the Oracle database service with the TNS alias 'ORCL'
+
 
 ## References
 - [How to install htop on CentOS Linux 8](https://www.cyberciti.biz/faq/how-to-install-htop-on-centos-linux-8/) - htop is nothing but an interactive process viewer for CentOS Linux 8 system
