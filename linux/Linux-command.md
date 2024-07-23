@@ -431,6 +431,7 @@
 - Example: `tnsping ORCL` - test the connection to the Oracle database service with the TNS alias 'ORCL'
 
 
+
 ## References
 - [How to install htop on CentOS Linux 8](https://www.cyberciti.biz/faq/how-to-install-htop-on-centos-linux-8/) - htop is nothing but an interactive process viewer for CentOS Linux 8 system
 - [How To Install the Apache Web Server on CentOS 8](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-centos-8)

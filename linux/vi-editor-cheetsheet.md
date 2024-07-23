@@ -130,3 +130,11 @@
 ### Command-line mode:  
 - `/pattern` - search forwards for the pattern
 
+### Syntax on and off:
+- `:syntax on` - enable syntax highlighting
+- `:syntax off` - disable syntax highlighting
+
+## Line number on and off
+- `:set number` - display line numbers
+- `:set nonumber` - hide line numbers
+
