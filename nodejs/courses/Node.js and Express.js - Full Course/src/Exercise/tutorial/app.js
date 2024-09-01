@@ -7,3 +7,8 @@ else{
 }
 
 console.log(`Hey it's my first node app`);
+
+console.log(__dirname);
+setInterval(()=>{
+    console.log("Hello from interval");
+}, 1000);

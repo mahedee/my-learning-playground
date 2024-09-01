@@ -1,5 +1,5 @@
 ## Study Status
-- Complete up to - 18:41/8:16:47
+- Complete up to - 26:41/8:16:47
 ## Topics
 ## Notes
 ## Keywords
