@@ -22,10 +22,41 @@
 
 - CFN-Resources are called L1 Constructs
 - CDK-Resources are called L2 Constructs
+- vpc - virtual private cloud
+- ec2 - elastic compute cloud
+- Infrasturcture as code
+- CDK - Cloud Development Kit
+
+## Commands
+- `cdk docs` - This will open the latest documentation of cdk
+- `npm install @aws-cdk/aws-s3 --save` - Install aws-s3 module 
+- `cdk version` - Echo command line cdk version
+- `cdk init TEMPLATE --lanugage LANGUAGE` - Create a new CDK Project
+- `cdk synth` - Synthesize the cdk project
+- `cdk deploy` - Deploy the cdk project
+- `cdk destroy` - Destroy the cdk project
+- `cdk diff` - Compare local and deployed stack
+- `cdk bootstrap` - Bootstrap the cdk project
+- `cdk init app --language=typescript` - Create a new CDK Project in types
+- `npm install` - Install the latest version of everything that matches the ranges in 'package.json'
+- `npm ci` - Install the same exact dependency versions as recorded in 'package-lock.json'
+- `aws configure` - to set up and store the AWS CLI configuration on your local machine
+- `aws sts get-caller-identity` - to get the caller identity of the current AWS
+- `aws iam get-user` - to get the user details of the current AWS
+- `aws iam list-users` - to list all the users in the current AWS
+- `aws --version` - to get the version of aws cli
+- `cdk bootstrap YourAccountID/region` - bootstrap the cdk project
+
 
 
 ## Keywords
-CDK, 
+CDK, region, vpc
 
 Course: https://app.pluralsight.com/library/courses/aws-infrastructure-typescript-getting-started/table-of-contents
-Completed up to: 2.6
+Completed up to: 2.6 - Examining Construct Levels in the CDK
+
+
+## References:
+* [Install or update the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html#getting-started-install-instructions)
+
+* [Youtube - aws cdk bootstrap](https://www.youtube.com/watch?v=98I8wk6S0FQ)
