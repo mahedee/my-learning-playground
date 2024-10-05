@@ -46,6 +46,10 @@
 - `aws iam list-users` - to list all the users in the current AWS
 - `aws --version` - to get the version of aws cli
 - `cdk bootstrap YourAccountID/region` - bootstrap the cdk project
+- `cdk synth --output=./templates` - synthesizes an AWS CloudFormation template from your AWS CDK app and saves the generated templates in the specified ./templates directory.
+- `cdk list` - displays a list of all the AWS CloudFormation stacks defined in your AWS CDK app.
+- `aws cloudformation list-exports` - command retrieves a list of all exported output values from your AWS CloudFormation stacks
+
 
 
 
@@ -53,7 +57,7 @@
 CDK, region, vpc
 
 Course: https://app.pluralsight.com/library/courses/aws-infrastructure-typescript-getting-started/table-of-contents
-Completed up to: 2.6 - Examining Construct Levels in the CDK
+Completed up to: 3.4 - Deploy a CDK App
 
 
 ## References:
