@@ -26,6 +26,7 @@
 - ec2 - elastic compute cloud
 - Infrasturcture as code
 - CDK - Cloud Development Kit
+- Tutorial is in CDK version 1 and I am working on CDK version 2
 
 ## Commands
 - `cdk docs` - This will open the latest documentation of cdk
@@ -49,6 +50,8 @@
 - `cdk synth --output=./templates` - synthesizes an AWS CloudFormation template from your AWS CDK app and saves the generated templates in the specified ./templates directory.
 - `cdk list` - displays a list of all the AWS CloudFormation stacks defined in your AWS CDK app.
 - `aws cloudformation list-exports` - command retrieves a list of all exported output values from your AWS CloudFormation stacks
+- `npm install @aws-cdk/aws-ec2 --save` - installs the AWS CDK EC2 module and adds it as a dependency in the project's package.json file.
+
 
 
 
@@ -57,10 +60,10 @@
 CDK, region, vpc
 
 Course: https://app.pluralsight.com/library/courses/aws-infrastructure-typescript-getting-started/table-of-contents
-Completed up to: 3.4 - Deploy a CDK App
+Completed up to: 4.2 - Updating an Existing CDK App
 
 
 ## References:
 * [Install or update the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html#getting-started-install-instructions)
-
 * [Youtube - aws cdk bootstrap](https://www.youtube.com/watch?v=98I8wk6S0FQ)
+* https://github.com/aws-samples/aws-refarch-wordpress

@@ -1,8 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
-
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+import { Networking } from './networking';
 
 export class TypescriptCdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -23,12 +22,9 @@ export class TypescriptCdkStack extends cdk.Stack {
       exportName: 'DocumentsBucketName'
     });
 
-    // you can access the encryption key:
-    // assert(bucket.encryptionKey instanceof kms.Key);
-
-    // example resource
-    // const queue = new sqs.Queue(this, 'TypescriptCdkQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    // Create a new instance of the Networking construct
+    new Networking(this, 'Networking', {
+      maxAzs: 2
+    });
   }
 }
