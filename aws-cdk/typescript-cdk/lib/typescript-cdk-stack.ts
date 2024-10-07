@@ -3,6 +3,7 @@ import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { Networking } from './networking';
 
+
 export class TypescriptCdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
@@ -23,8 +24,11 @@ export class TypescriptCdkStack extends cdk.Stack {
     });
 
     // Create a new instance of the Networking construct
-    new Networking(this, 'Networking', {
+    const networkingStack = new Networking(this, 'Networking', {
       maxAzs: 2
     });
+
+    cdk.Tags.of(networkingStack).add('Module', 'Networking');
+
   }
 }
