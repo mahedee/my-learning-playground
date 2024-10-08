@@ -60,7 +60,7 @@
 CDK, region, vpc
 
 Course: https://app.pluralsight.com/library/courses/aws-infrastructure-typescript-getting-started/table-of-contents
-Completed up to: 4.4 - Deleting an Existing CDK App
+Completed up to: 5.2 - Researching Our Implementation
 
 
 ## References:
