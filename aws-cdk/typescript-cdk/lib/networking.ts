@@ -18,7 +18,8 @@ export class Networking extends Construct {
 
         // Create the VPC with CIDR range and subnets (Public and Private)
         this.vpc = new ec2.Vpc(this, 'AppVPC', {
-            cidr: '10.0.0.0/16',
+            //cidr: '10.0.0.0/16',
+            ipAddresses: ec2.IpAddresses.cidr('10.0.0.0/16'),
             maxAzs: props.maxAzs, // Use the maxAzs value from props
             subnetConfiguration: [
                 {
@@ -29,7 +30,8 @@ export class Networking extends Construct {
                 {
                     cidrMask: 24, // Private subnet with /24 CIDR block
                     name: 'Private',
-                    subnetType: ec2.SubnetType.PRIVATE_WITH_NAT
+                    //subnetType: ec2.SubnetType.PRIVATE_WITH_NAT
+                    subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS,
                 }
             ],
         });

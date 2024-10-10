@@ -51,6 +51,11 @@
 - `cdk list` - displays a list of all the AWS CloudFormation stacks defined in your AWS CDK app.
 - `aws cloudformation list-exports` - command retrieves a list of all exported output values from your AWS CloudFormation stacks
 - `npm install @aws-cdk/aws-ec2 --save` - installs the AWS CDK EC2 module and adds it as a dependency in the project's package.json file.
+- `npm install --save @types/aws-lambda` - - Install TypeScript type definitions for AWS Lambda functions
+- `npm i aws-sdk` - Install the AWS SDK to interact with AWS services from your Node.js application
+- `npm install @aws-cdk/aws-lambda-nodejs @aws-cdk/aws-lambda --save` - Install AWS CDK libraries to define and manage AWS Lambda functions, including Node.js specific support
+- `npm install parcel@2.0.0-beta.1 --save-dev --save-exact` - Install the exact beta version (2.0.0-beta.1) of Parcel as a dev dependency, ensuring no future updates change the version 
+
 
 
 
@@ -60,7 +65,7 @@
 CDK, region, vpc
 
 Course: https://app.pluralsight.com/library/courses/aws-infrastructure-typescript-getting-started/table-of-contents
-Completed up to: 5.2 - Researching Our Implementation
+Completed up to: 5.4 - Implementing a Lambda Function in the CDK
 
 
 ## References:
