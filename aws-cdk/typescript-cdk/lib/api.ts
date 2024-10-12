@@ -6,6 +6,8 @@ import { Construct } from 'constructs'; // Import Construct base class from cons
 import * as path from 'path';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import * as apig from 'aws-cdk-lib/aws-apigatewayv2';
+import { HttpLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations';
 
 export interface DocumentManagementAPIProps {
     /* The line `documentBucket: s3.IBucket;` in the `DocumentManagementAPIProps` interface is defining
@@ -25,36 +27,75 @@ export class DocumentManagementAPI extends Construct {
             handler: 'getDocuments',
             runtime: Runtime.NODEJS_14_X,
             environment: {
-            DOCUMENTS_BUCKET_NAME: props.documentBucket.bucketName
+                DOCUMENTS_BUCKET_NAME: props.documentBucket.bucketName
             },
             bundling: {
-            externalModules: [
-                'aws-sdk'
-            ]
+                externalModules: [
+                    'aws-sdk'
+                ]
             }
         });
 
         // // Grant the Lambda function read access to the S3 bucket
         // props.documentBucket.grantRead(getDocumentsFunction);
 
-       /* The code snippet you provided is creating an IAM policy statement to allow the Lambda
-       function (`getDocumentsFunction`) to list objects in the specified S3 bucket
-       (`props.documentBucket`). Here's a breakdown of what each part of the code is doing: */
+        /* The code snippet you provided is creating an IAM policy statement to allow the Lambda
+        function (`getDocumentsFunction`) to list objects in the specified S3 bucket
+        (`props.documentBucket`). Here's a breakdown of what each part of the code is doing: */
         // Create an IAM policy statement to allow the Lambda function to list objects in the S3 bucket
         const bucketPermission = new iam.PolicyStatement();
-       /* The line `bucketPermission.addResources(`${props.documentBucket.bucketArn}/*`);` is adding a
-       resource-based permission to the IAM policy statement `bucketPermission`. */
+        /* The line `bucketPermission.addResources(`${props.documentBucket.bucketArn}/*`);` is adding a
+        resource-based permission to the IAM policy statement `bucketPermission`. */
         bucketPermission.addResources(`${props.documentBucket.bucketArn}/*`);
         bucketPermission.addActions('s3:GetObject', 's3:PutObject');
         getDocumentsFunction.addToRolePolicy(bucketPermission);
 
-/* The code snippet you provided is creating an IAM policy statement to allow the Lambda function
-(`getDocumentsFunction`) to list the contents of the specified S3 bucket (`props.documentBucket`). */
+        /* The code snippet you provided is creating an IAM policy statement to allow the Lambda function
+        (`getDocumentsFunction`) to list the contents of the specified S3 bucket (`props.documentBucket`). */
 
         const bucketContainerPermission = new iam.PolicyStatement();
         bucketContainerPermission.addResources(props.documentBucket.bucketArn);
         bucketContainerPermission.addActions('s3:ListBucket');
         getDocumentsFunction.addToRolePolicy(bucketContainerPermission);
 
-}
+
+        // Purpose of the following code snippet is
+        // to create an HTTP API using the AWS CDK's HttpApi construct.
+        // This API will be used to interact with the Lambda function created above.
+        const httpApi = new apig.HttpApi(this, 'HttpAPI', {
+            apiName: 'document-management-api',
+            createDefaultStage: true,
+            corsPreflight: {
+                allowOrigins: ['*'],
+                allowMethods: [apig.CorsHttpMethod.GET],
+                maxAge: cdk.Duration.days(10),
+            }
+        })
+
+        // // Purpose of the following code snippet is
+        // // to create a Lambda proxy integration for the HTTP API.
+        // const integration = new apig.LambdaProxyIntegration({
+        //     handler: getDocumentsFunction
+        // });
+
+        // Purpose of the following code snippet is
+        // to create a Lambda proxy integration for the HTTP API.
+        const integration = new HttpLambdaIntegration('GetDocumentsIntegration', getDocumentsFunction);
+
+
+        // Purpose of the following code snippet is 
+        // to add a route to the HTTP API that maps the GET method to the Lambda integration.
+        httpApi.addRoutes({
+            path: '/getDocuments',
+            methods: [apig.HttpMethod.GET],
+            integration: integration
+        })
+
+        // Purpose of the following code snippet is
+        new cdk.CfnOutput(this, 'APIEndPoint', {
+            value: httpApi.url!,
+            exportName: 'APIEndPoint'
+
+        })
+    }
 }

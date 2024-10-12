@@ -65,7 +65,7 @@
 CDK, region, vpc
 
 Course: https://app.pluralsight.com/library/courses/aws-infrastructure-typescript-getting-started/table-of-contents
-Completed up to: 5.6 - Implementing IAM Permissions
+Completed up to: 5.7 - Connecting Lambda and API Gateway
 
 
 ## References:
