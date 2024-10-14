@@ -27,6 +27,11 @@
 - Infrasturcture as code
 - CDK - Cloud Development Kit
 - Tutorial is in CDK version 1 and I am working on CDK version 2
+- Amazon ECS - Amazon Elastic Container Service (Amazon ECS) is a fully managed container orchestration service that allows you to run, manage, and scale containerized applications on AWS.
+- Amazon EKS - Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes service that makes it easy for you to run Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane or nodes.
+- AWS Fargate - AWS Fargate is a serverless compute engine for containers that works with both Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS). Fargate allows you to run containers without having to manage the underlying infrastructure, such as EC2 instances or virtual machines.
+- ALB - Application Load Balancer
+- NLB - Network Load Balancer
 
 ## Commands
 - `cdk docs` - This will open the latest documentation of cdk
@@ -65,7 +70,7 @@
 CDK, region, vpc
 
 Course: https://app.pluralsight.com/library/courses/aws-infrastructure-typescript-getting-started/table-of-contents
-Completed up to: 5.7 - Connecting Lambda and API Gateway
+Completed up to: 6.2 - Container Services on AWS.
 
 
 ## References:
