@@ -32,6 +32,8 @@
 - AWS Fargate - AWS Fargate is a serverless compute engine for containers that works with both Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS). Fargate allows you to run containers without having to manage the underlying infrastructure, such as EC2 instances or virtual machines.
 - ALB - Application Load Balancer
 - NLB - Network Load Balancer
+- EJS - EJS, or Embedded JavaScript, is a templating engine for Node.js that lets you generate HTML with plain JavaScript. It allows you to create dynamic content by embedding JavaScript logic directly within HTML. EJS uses simple syntax for embedding JavaScript code, making it easy to generate and manipulate HTML content. It’s commonly used in web applications to render views and is particularly popular in combination with Express.js for server-side rendering.
+- `tsconfig.json` - The tsconfig.json file configures the TypeScript compiler options, project structure, and type-checking rules, ensuring consistent behavior during development and compilation.
 
 ## Commands
 - `cdk docs` - This will open the latest documentation of cdk
@@ -60,17 +62,21 @@
 - `npm i aws-sdk` - Install the AWS SDK to interact with AWS services from your Node.js application
 - `npm install @aws-cdk/aws-lambda-nodejs @aws-cdk/aws-lambda --save` - Install AWS CDK libraries to define and manage AWS Lambda functions, including Node.js specific support
 - `npm install parcel@2.0.0-beta.1 --save-dev --save-exact` - Install the exact beta version (2.0.0-beta.1) of Parcel as a dev dependency, ensuring no future updates change the version 
-
-
-
-
+- `npm install axios ejs express --save` - Installs the axios, ejs, and express packages as dependencies in the project.
+- `npm install typescript @types/express @types/node --save-dev` - Install TypeScript and type definitions for Express and Node.js as dev dependencies
+    - typescript: This installs TypeScript, a typed superset of JavaScript.
+    - @types/express: This installs the type definitions for the Express framework, allowing TypeScript to understand Express types.
+    - @types/node: This installs the type definitions for Node.js, enabling TypeScript to recognize Node.js built-in modules and types.
+    --save-dev: This flag indicates that these packages are development dependencies, which means they are only needed during development and not in the production environment.
+- `npm run docker:build` - This command builds the Docker image using the specified Dockerfile.
+- `npm run docker:run` - This command runs the Docker container using the built Docker image.
 
 
 ## Keywords
 CDK, region, vpc
 
 Course: https://app.pluralsight.com/library/courses/aws-infrastructure-typescript-getting-started/table-of-contents
-Completed up to: 6.2 - Container Services on AWS.
+Completed up to: 6.3 - Creating a Docker container for the CDK.
 
 
 ## References:
