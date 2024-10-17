@@ -19,8 +19,20 @@ export class DocumentManagementWebserver extends Construct {
         super(scope, id);
 
 
+        /**
+         * Creates a Docker image asset for the webserver.
+         * 
+         * This code snippet initializes a new `DockerImageAsset` named `WebserverDockerAsset`.
+         * It specifies the directory containing the Dockerfile and other necessary files
+         * to build the Docker image for the webserver. The directory path is constructed
+         * by joining the current directory with the relative path to the 'webserver' folder.
+         * 
+         * @param this - The scope in which this resource is defined.
+         * @param 'WebserverDockerAsset' - The logical ID for the Docker image asset.
+         * @param directory - The directory containing the Dockerfile and other resources.
+         */
         const webserverDocker = new DockerImageAsset(this, 'WebserverDockerAsset', {
-            directory: path.join(__dirname, '..', 'container', 'webserver')
+            directory: path.join(__dirname, '..', 'containers', 'webserver')
         });
 
         const fargetService = new escp.ApplicationLoadBalancedFargateService(this, 'WebserverService',{
