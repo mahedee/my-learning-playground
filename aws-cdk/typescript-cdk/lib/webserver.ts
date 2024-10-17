@@ -8,11 +8,10 @@ import * as ecs from 'aws-cdk-lib/aws-ecs';
 import * as apig from 'aws-cdk-lib/aws-apigatewayv2';
 
 
-export interface DocumentManagementWebserverProps {
-    vpc: ec2.IVpc
+interface DocumentManagementWebserverProps {
+    vpc:ec2.IVpc
     api:apig.HttpApi
-
-}
+  }
 
 export class DocumentManagementWebserver extends Construct {
     constructor(scope: Construct, id: string, props: DocumentManagementWebserverProps) {
@@ -35,23 +34,22 @@ export class DocumentManagementWebserver extends Construct {
             directory: path.join(__dirname, '..', 'containers', 'webserver')
         });
 
-        const fargetService = new escp.ApplicationLoadBalancedFargateService(this, 'WebserverService',{
+        const fargateService = new escp.ApplicationLoadBalancedFargateService(this, 'WebserverService', {
             vpc: props.vpc,
-            taskImageOptions:{
-                image: ecs.ContainerImage.fromDockerImageAsset(webserverDocker),
-                environment:{
-                    SERVER_PORT: '8080',
-                    API_BASE: props.api.url!
-
-                },
-                // purpose of the following 
-                containerPort: 8080
+            taskImageOptions: {
+              image: ecs.ContainerImage.fromDockerImageAsset(webserverDocker),
+              environment: {
+                SERVER_PORT: "8080",
+                API_BASE: props.api.url!
+              },
+              containerPort: 8080
             }
-        });
+          });
 
-        new cdk.CfnOutput(this, "WebserverHost", {
-            exportName: 'WebserverHost',
-            value: fargetService.loadBalancer.loadBalancerDnsName
+
+        new cdk.CfnOutput(this, 'WebserverHost', {
+        exportName: 'WebserverHost',
+        value: fargateService.loadBalancer.loadBalancerDnsName
         });
 
     }
