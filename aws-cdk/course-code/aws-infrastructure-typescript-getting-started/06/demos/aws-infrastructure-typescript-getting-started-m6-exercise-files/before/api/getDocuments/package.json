@@ -8,7 +8,9 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "service-get-documents": "file:"
+  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.61",
     "aws-sdk": "^2.742.0"
