@@ -4,6 +4,7 @@ import * as s3 from 'aws-cdk-lib/aws-s3';
 import { Networking } from './networking';
 import { DocumentManagementAPI } from './api';
 import * as s3Deploy from 'aws-cdk-lib/aws-s3-deployment';
+import { DocumentManagementWebserver } from './webserver';
 
 
 export class TypescriptCdkStack extends cdk.Stack {
@@ -43,9 +44,18 @@ export class TypescriptCdkStack extends cdk.Stack {
     });
 
     cdk.Tags.of(networkingStack).add('Module', 'Networking');
+
     const api = new DocumentManagementAPI(this, 'DocumentManagementAPI', {
       documentBucket: bucket
     });
     cdk.Tags.of(api).add('Module', 'API');
+
+    const webserver = new DocumentManagementWebserver(this, 'DocumentManagementWebserver',{
+      vpc: networkingStack.vpc,
+      api: api.httpApi
+    });
+    cdk.Tags.of(webserver).add('Module', 'Webserver');
+
+    
   }
 }

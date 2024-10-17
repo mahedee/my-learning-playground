@@ -19,6 +19,9 @@ export interface DocumentManagementAPIProps {
 }
 
 export class DocumentManagementAPI extends Construct {
+
+    public readonly httpApi: apig.HttpApi;
+
     constructor(scope: Construct, id: string, props: DocumentManagementAPIProps) {
         super(scope, id);
 
@@ -62,7 +65,7 @@ export class DocumentManagementAPI extends Construct {
         // Purpose of the following code snippet is
         // to create an HTTP API using the AWS CDK's HttpApi construct.
         // This API will be used to interact with the Lambda function created above.
-        const httpApi = new apig.HttpApi(this, 'HttpAPI', {
+        this.httpApi = new apig.HttpApi(this, 'HttpAPI', {
             apiName: 'document-management-api',
             createDefaultStage: true,
             corsPreflight: {
@@ -85,7 +88,7 @@ export class DocumentManagementAPI extends Construct {
 
         // Purpose of the following code snippet is 
         // to add a route to the HTTP API that maps the GET method to the Lambda integration.
-        httpApi.addRoutes({
+        this.httpApi.addRoutes({
             path: '/getDocuments',
             methods: [apig.HttpMethod.GET],
             integration: integration
@@ -93,7 +96,7 @@ export class DocumentManagementAPI extends Construct {
 
         // Purpose of the following code snippet is
         new cdk.CfnOutput(this, 'APIEndPoint', {
-            value: httpApi.url!,
+            value: this.httpApi.url!,
             exportName: 'APIEndPoint'
 
         })
